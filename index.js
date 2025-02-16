@@ -80,3 +80,4 @@ const checkAnagram = (str1, str2) => {
   return join1 == join2
 } 
 
+console.log('INitial commit');
