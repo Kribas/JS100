@@ -79,3 +79,31 @@ const checkAnagram = (str1, str2) => {
   //check anagram
   return join1 == join2
 } 
+
+//Capitalize first letter of every word in a string
+const capitalizeFirstLetter = (str) => {
+  let words = []
+  let word = ''
+  
+  for(let s of str) {
+      if(s!== " ") {
+          word+=s
+      } else {
+          if(word.length > 0) {
+              words.push(word)
+              word = ''
+          }
+      }
+  }
+  
+  if(word.length > 0) {
+      words.push(word)
+  }
+  
+  for(let i=0; i<words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+  }
+  
+  return words.join(' ')
+  
+}
