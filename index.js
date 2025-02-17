@@ -101,9 +101,9 @@ const capitalizeFirstLetter = (str) => {
   }
   
   for(let i=0; i<words.length; i++) {
-      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+    if(words[i][0].charCodeAt(0)>=97 && words[i][0].charCodeAt(0)<=122) {
+        words[i] = String.fromCharCode(words[i][0].charCodeAt(0) - 32) + words[i].slice(1)
+    }
   }
-  
-  return words.join(' ')
-  
+  return words.reduce((str,a) => {return str + ' ' + a }, '')
 }
