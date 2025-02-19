@@ -107,3 +107,21 @@ const capitalizeFirstLetter = (str) => {
   }
   return words.reduce((str,a) => {return str + ' ' + a }, '')
 }
+
+//Count number of vowels in a string
+const countVowels = (str) => {
+  let splitStr = []
+  
+  //Split the string
+  for(let s of str) {
+      splitStr.push(s)
+  }
+  
+  let count = 0
+  for(let i=0; i<splitStr.length; i++) {
+      if(splitStr[i] == 'a' || splitStr[i] == 'e' || splitStr[i]  == 'i' || splitStr[i] == 'o' || splitStr[i] == 'u') {
+          count++
+      }
+  }
+  return count
+}
