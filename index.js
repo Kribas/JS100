@@ -125,3 +125,10 @@ const countVowels = (str) => {
   }
   return count
 }
+
+//Find factorial using recursion
+const findFactorialWithRecursion = (num) => {
+  if(num == 0 || num == 1) return 1
+  
+  return num * findFactorialWithRecursion(num - 1)
+}
