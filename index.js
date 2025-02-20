@@ -132,3 +132,6 @@ const findFactorialWithRecursion = (num) => {
   
   return num * findFactorialWithRecursion(num - 1)
 }
+
+// Generate random number between two numbers 
+ 
