@@ -134,4 +134,6 @@ const findFactorialWithRecursion = (num) => {
 }
 
 // Generate random number between two numbers 
- 
+ const generateRandomNumber = (max,min) => {
+    return Math.random() * (max - min) + min
+}
