@@ -138,5 +138,4 @@ const findFactorialWithRecursion = (num) => {
     return Math.random() * (max - min) + min
 }
 
-console.log('Initial commit');
 
