@@ -138,4 +138,77 @@ const findFactorialWithRecursion = (num) => {
     return Math.random() * (max - min) + min
 }
 
+// Write a function that takes an array of integers and returns the number of even and odd numbers.
+const evenOddCount = (arr) => {
+  let evenCount = 0
+  let oddCount = 0
 
+  arr.forEach(num => (num % 2 == 0 ? evenCount++ : oddCount++))
+
+  return {
+    evenCount,
+    oddCount
+  }
+}
+
+
+//Build a function that manually reverses a string using a loop.
+const reverseString = (str) => {
+  let res = ''
+  for(let i=str.length - 1; i>=0; i--) {
+    res+=str[i]
+  }
+  return res
+}
+
+//Return an array that contains Fizz for number divisible by 3 and Buzz for number divisible by 5 and Prime for a prime number
+
+//Check if a number is prime
+const isPrime = (n) => {
+  if(n < 2) return false
+  for(let i=2; i<=Math.sqrt(n); i++) {
+    if(n % i == 0) return false
+  }
+
+  return true
+}
+
+
+const fizzBuzzPrime = (num1, num2) => {
+  let res = []
+  for(let i=num1; i<=num2; i++) {
+    if(i % 3 == 0) {
+      res.push('Fizz')
+    } else if(i % 5 == 0) {
+      res.push('Buzz')
+    } else if(isPrime(i)) {
+      res.push("Prime")
+    } else {
+      res.push(i)
+    } 
+  }
+  return res
+}
+
+// Check if a string is a palindrome after removing spaces and ignoring case.
+const isPalindrome = (str) => {
+  return str.replace(/\s/g, '').toLowerCase().split('').reverse().join('') === str.replace(/\s/g, '').toLowerCase()
+}
+//Optimized code
+const isPalindromeOptimized = (str) => {
+
+  let cleaned = str.replace(/\s/g, '').toLowerCase()
+
+  let left = 0
+  let right = str.length - 1
+
+  while(left < right) {
+    if(cleaned[left] !== cleaned[right]) {
+      return false
+    }
+    left++
+    right--
+  }
+  return true
+}
+console.log(isPalindrome("Was it a car or a cat I saw"))
