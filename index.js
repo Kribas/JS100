@@ -211,4 +211,16 @@ const isPalindromeOptimized = (str) => {
   }
   return true
 }
-console.log(isPalindrome("Was it a car or a cat I saw"))
+
+//Split an array into subarrays of a given size.
+const chunkArray = (arr, n) => {
+  let res = []
+  let i=0
+  while(i < arr.length) {
+    res.push(arr.slice(i, i+n))
+    i+=n
+  }
+  console.log(res)
+}
+
+chunkArray([1,2,3,4,5],2)
