@@ -223,4 +223,17 @@ const chunkArray = (arr, n) => {
   console.log(res)
 }
 
-chunkArray([1,2,3,4,5],2)
+//Write a function that counts all items, including those in nested arrays.
+const deepCount = (arr) => {
+  let count = 0
+  for(let i=0; i<arr.length; i++) {
+    if(Array.isArray(arr[i])) {
+      count+=arr[i].length
+    }
+    count+=i
+  }
+  console.log(count)
+}
+deepCount([1, [2, 3], [4, [5]]])
+
+console.log('Initial commit')
