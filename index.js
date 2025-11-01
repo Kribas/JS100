@@ -257,3 +257,109 @@ const printTenNumbers = () => {
 };
 
 printTenNumbers();
+
+//Print even numbers from 1 to 50
+const printEvenNumbers = () => {
+  for (let i = 0; i <= 50; i++) {
+    if (i % 2 == 0) {
+      console.log(i);
+    }
+  }
+};
+
+printEvenNumbers();
+
+//Sum of numbers from 1 to n
+const sumOfNumbers = (n) => {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+
+  return sum;
+};
+
+console.log(sumOfNumbers(2));
+
+// Factorial of a given number
+const factorial = (n) => {
+  if (n == 0) return 1;
+  let fact = 1;
+  for (let i = 1; i <= n; i++) {
+    fact *= i;
+  }
+  return fact;
+};
+
+console.log(factorial(5));
+
+// Check prime number
+const checkPrime = (n) => {
+  let isPrime = true;
+  if (n == 1) console.log(`${n} is neither prime nor composite number`);
+
+  for (let i = 2; i <= n / 2; i++) {
+    if (n % i == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(`${n} is a prime number`);
+  } else {
+    console.log(`${n} is not a prime number`);
+  }
+};
+
+checkPrime(2);
+
+//Find largest of three numbers
+const findLargest = (n1, n2, n3) => {
+  let max = n1;
+  if (n2 > max) {
+    max = n2;
+  }
+  if (n3 > max) {
+    max = n3;
+  }
+  return `${max} is the largest number`;
+};
+
+console.log(findLargest(3, 6, 9));
+
+// Swap two variables without using a third variable
+const swap = (a, b) => {
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  console.log("a", a);
+  console.log("b", b);
+};
+
+swap(5, 6);
+
+//Reverse a string
+
+const reverseStr = (str) => {
+  let res = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    res += str[i];
+  }
+  return res;
+};
+
+reverseStr("Hello");
+
+// Check if a string is a palindrome
+const palindromeStr = (str) => {
+  let revStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    revStr += str[i];
+  }
+
+  return revStr === str ? "Palindrome" : "Non Palindrome";
+};
+
+console.log(palindromeStr("rar"));
