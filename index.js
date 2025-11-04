@@ -363,3 +363,5 @@ const palindromeStr = (str) => {
 };
 
 console.log(palindromeStr("rar"));
+
+console.log("Initial commit");
