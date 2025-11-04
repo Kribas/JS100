@@ -364,4 +364,27 @@ const palindromeStr = (str) => {
 
 console.log(palindromeStr("rar"));
 
-console.log("Initial commit");
+//Count vowels in a string
+const countVowelsInString = (str) => {
+  //Remove whitespaces
+  let cleanedStr = str.replace(/\s/g, "");
+  let lowerStr = "";
+  let vowels = 0;
+  //Convert to lowerCase
+  for (let i = 0; i < cleanedStr.length; i++) {
+    if (cleanedStr[i].charCodeAt() >= 65 && cleanedStr[i].charCodeAt() <= 90) {
+      lowerStr += String.fromCharCode(cleanedStr[i].charCodeAt() + 32);
+    } else {
+      lowerStr += cleanedStr[i];
+    }
+  }
+  //Count the vowels
+  for (let j of lowerStr) {
+    if (j == "a" || j == "e" || j == "i" || j == "o" || j == "u") {
+      vowels++;
+    }
+  }
+  console.log(vowels);
+};
+
+countVowelsInString("aeiou");
