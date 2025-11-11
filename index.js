@@ -389,4 +389,19 @@ const countVowelsInString = (str) => {
 
 countVowelsInString("aeiou");
 
-console.log("Initial commit");
+//Find the maximum and minimum number in an array.
+const maxMinArray = (arr) => {
+  let max = arr[0];
+  let min = arr[1];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return { max: max, min: min };
+};
+
+console.log(maxMinArray([0, 2, 3, 8, 2]));
