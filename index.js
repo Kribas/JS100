@@ -388,3 +388,5 @@ const countVowelsInString = (str) => {
 };
 
 countVowelsInString("aeiou");
+
+console.log("Initial commit");
