@@ -415,3 +415,22 @@ const sumArray = (arr) => {
   return sum;
 };
 console.log(sumArray([1, 2, 3, 4, 5]));
+
+//Count the number of even and odd numbers in an array.
+const countEvenOdd = (arr) => {
+  let even = 0;
+  let odd = 0;
+  for (let n of arr) {
+    if (n % 2 == 0) {
+      even++;
+    } else {
+      odd++;
+    }
+  }
+  return {
+    evenCount: even,
+    oddCount: odd,
+  };
+};
+
+console.log(countEvenOdd([1, 2, 3, 4, 5, 6, 10]));
