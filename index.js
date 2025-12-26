@@ -457,3 +457,22 @@ const checkArr = (arr, e) => {
   return false;
 };
 console.log(checkArr([1, 2, 3, 4, 5], 2));
+
+//Remove duplicates from an array
+const removeDuplicate = (arr) => {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === res[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      res[res.length] = arr[i];
+    }
+  }
+  return res;
+};
+console.log(removeDuplicate([1, 1, 2, 2, 3, 4, 5]));
