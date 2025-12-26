@@ -476,3 +476,26 @@ const removeDuplicate = (arr) => {
   return res;
 };
 console.log(removeDuplicate([1, 1, 2, 2, 3, 4, 5]));
+
+//Merge two arrays and sort them
+const mergeSort = (arr1, arr2) => {
+  let res = [];
+  for (let i = 0; i < arr1.length; i++) {
+    res[res.length] = arr1[i];
+  }
+  for (let j = 0; j < arr2.length; j++) {
+    res[res.length] = arr2[j];
+  }
+  //Bubble sort
+  for (let i = 0; i < res.length; i++) {
+    for (let j = 0; j < res.length - 1 - i; j++) {
+      if (res[j] > res[j + 1]) {
+        let temp = res[j];
+        res[j] = res[j + 1];
+        res[j + 1] = temp;
+      }
+    }
+  }
+  return res;
+};
+console.log(mergeSort([1, 5, 3, 2, 6], [0, 0]));
