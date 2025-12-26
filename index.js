@@ -434,3 +434,13 @@ const countEvenOdd = (arr) => {
 };
 
 console.log(countEvenOdd([1, 2, 3, 4, 5, 6, 10]));
+
+//Reverse an array
+const revArr = (arr) => {
+  let res = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    res.push(arr[i]);
+  }
+  return res;
+};
+revArr([1, 2, 3, 4, 5]);
