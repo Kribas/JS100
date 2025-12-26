@@ -444,3 +444,16 @@ const revArr = (arr) => {
   return res;
 };
 revArr([1, 2, 3, 4, 5]);
+
+//Check if an element exists in an array
+const checkArr = (arr, e) => {
+  let i = 0;
+  while (i < arr.length - 1) {
+    if (arr[i] === e) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+};
+console.log(checkArr([1, 2, 3, 4, 5], 2));
