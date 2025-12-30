@@ -513,3 +513,12 @@ const fibonacci = (n) => {
 };
 
 console.log(fibonacci(10));
+
+//Check if a given number is an armstrong number
+const armstrongNumber = (n) => {
+  let digits = n.toString().split("").map(Number);
+  let power = digits.length;
+  let res = digits.reduce((acc, digit) => acc + Math.pow(digit, power), 0);
+  return n == res ? "Armstrong" : "Not Armstrong";
+};
+console.log(armstrongNumber(371));
