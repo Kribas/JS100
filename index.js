@@ -499,3 +499,17 @@ const mergeSort = (arr1, arr2) => {
   return res;
 };
 console.log(mergeSort([1, 5, 3, 2, 6], [0, 0]));
+
+//Print fibonacci sequence from 1 to n
+
+const fibonacci = (n) => {
+  if (n < 1) return;
+  let res = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    let next = res[i - 1] + res[i - 2];
+    res.push(next);
+  }
+  return res;
+};
+
+console.log(fibonacci(10));
