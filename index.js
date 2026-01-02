@@ -570,3 +570,11 @@ const calculatePower = (n, p) => {
   }
   return res;
 };
+
+//Convert celcius to farenheit and vice versa
+const toFarenheit = (c) => {
+    return `${(c * 1.8) + 32} degree Farenheit`
+}
+ const toCelcius = (f) => {
+     return `${(f-32)/1.8} degree Celcius`
+ }
