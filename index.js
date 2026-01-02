@@ -573,8 +573,15 @@ const calculatePower = (n, p) => {
 
 //Convert celcius to farenheit and vice versa
 const toFarenheit = (c) => {
-    return `${(c * 1.8) + 32} degree Farenheit`
-}
- const toCelcius = (f) => {
-     return `${(f-32)/1.8} degree Celcius`
- }
+  return `${c * 1.8 + 32} degree Farenheit`;
+};
+const toCelcius = (f) => {
+  return `${(f - 32) / 1.8} degree Celcius`;
+};
+
+//Count the number of digits in a number
+const countDigits = (num) => {
+  return Math.abs(num).toString().length;
+};
+
+console.log(countDigits(12380));
