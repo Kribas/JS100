@@ -553,11 +553,20 @@ console.log(lcm(24, 36));
 
 //Print multiplication table of a given numbers
 const multiplicationTable = (n) => {
-  let result = 0
-  for(let i=1; i<=10; i++) {
-      result = n * i
-      console.log(`${n} * ${i} = ${result}`)
+  let result = 0;
+  for (let i = 1; i <= 10; i++) {
+    result = n * i;
+    console.log(`${n} * ${i} = ${result}`);
   }
-}
-multiplicationTable(2)
+};
+multiplicationTable(2);
 
+//Calculate power of a number using loops
+const calculatePower = (n, p) => {
+  if (p == 0) return 1;
+  let res = 1;
+  for (let i = 1; i <= p; i++) {
+    res = res * n;
+  }
+  return res;
+};
