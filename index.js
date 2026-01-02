@@ -534,3 +534,19 @@ const gcd = (a, b) => {
 };
 
 console.log(gcd(36, 60));
+
+//LCM of two numbers
+const calculateGCD = (a, b) => {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+};
+
+const lcm = (a, b) => {
+  return (a * b) / calculateGCD(24, 36);
+};
+
+console.log(lcm(24, 36));
