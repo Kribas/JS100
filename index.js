@@ -585,3 +585,8 @@ const countDigits = (num) => {
 };
 
 console.log(countDigits(12380));
+
+//Count how many times a specific element appears in an array
+const countAppearances = (arr, ele) => {
+  return arr.filter((item) => item == ele).length;
+};
