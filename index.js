@@ -522,3 +522,15 @@ const armstrongNumber = (n) => {
   return n == res ? "Armstrong" : "Not Armstrong";
 };
 console.log(armstrongNumber(371));
+
+//GCD of two numbers
+const gcd = (a, b) => {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+};
+
+console.log(gcd(36, 60));
