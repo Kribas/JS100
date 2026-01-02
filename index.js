@@ -550,3 +550,14 @@ const lcm = (a, b) => {
 };
 
 console.log(lcm(24, 36));
+
+//Print multiplication table of a given numbers
+const multiplicationTable = (n) => {
+  let result = 0
+  for(let i=1; i<=10; i++) {
+      result = n * i
+      console.log(`${n} * ${i} = ${result}`)
+  }
+}
+multiplicationTable(2)
+
